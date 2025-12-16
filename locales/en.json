@@ -1,0 +1,21 @@
+{
+  "공통.테스트.1": "Common Test 1",
+  "공통.테스트.2": "Common Test 2",
+  "공통.테스트.3": "Common Test 3",
+  "공통.테스트.제목.없는페이지": "Not Found",
+  "공통.테스트.제목.게시물": "Posts",
+  "공통.테스트.제목.게시물상세": "Post Detail",
+  "공통.테스트.버튼.게시물목록으로": "Back to Posts",
+  "공통.테스트.버튼.카운터예제보기": "Try Counter Example →",
+  "공통.테스트.버튼.게시물예제보기": "Try Posts Example →",
+  "공통.테스트.라벨.FSD아키텍처": "Click to see a demo of the FSD architecture in action",
+  "학생.테스트.1": "Student Test 1",
+  "학생.테스트.2": "Student Test 2",
+  "학생.테스트.3": "Student Test 3",
+  "교수.테스트.1": "Professor Test 1",
+  "교수.테스트.2": "Professor Test 2",
+  "교수.테스트.3": "Professor Test 3",
+  "관리자.테스트.1": "Manager Test 1",
+  "관리자.테스트.2": "Manager Test 2",
+  "관리자.테스트.3": "Manager Test 3"
+}
