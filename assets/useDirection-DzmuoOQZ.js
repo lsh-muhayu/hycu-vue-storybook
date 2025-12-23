@@ -1,0 +1,1 @@
+import{c as e}from"./Primitive-CMMeSLXd.js";import{r as o,e as i}from"./iframe-6njZHdNW.js";const[n]=e("ConfigProvider");function s(r){const t=n({dir:o("ltr")});return i(()=>r?.value||t.dir?.value||"ltr")}export{n as i,s as u};
