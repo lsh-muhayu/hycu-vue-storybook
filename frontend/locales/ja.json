@@ -1,0 +1,12 @@
+{
+  "welcome": "ようこそ",
+  "hello": "こんにちは",
+  "greeting": "こんにちは、{{name}}さん!",
+  "notFound": "ページが見つかりません",
+  "posts": "投稿",
+  "postDetail": "投稿詳細",
+  "backToPosts": "投稿一覧に戻る",
+  "tryCounterExample": "カウンターの例を見る →",
+  "tryPostsExample": "投稿の例を見る →",
+  "clickToSeeDemo": "FSDアーキテクチャのデモをご覧ください"
+}
