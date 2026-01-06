@@ -35,7 +35,6 @@
   "API.E4001": "Authentication is required.",
   "API.deleteWorkflowStepCategory.S200": "The guidance stage type has been deleted.",
   "API.deleteEvaluationSheet.S200": "The evaluation sheet has been deleted.",
-  "API.E4001": "Authentication is required.",
   "학생.테스트.1": "Student Test 1",
   "학생.테스트.2": "Student Test 2",
   "학생.테스트.3": "Student Test 3",
