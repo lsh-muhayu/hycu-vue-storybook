@@ -195,6 +195,7 @@
   "지도단계>필드.학위과정.박사.라벨": "Doctoral (PhD)",
   "지도단계>필드.학위과정.라벨": "Degree Program",
   "지도단계>필드.평가표.라벨": "Evaluation Form",
+  "지도단계>필드.평가표.값.평가표없음": "No evaluation form",
   "지도단계>필드.지도단계유형.라벨": "Supervision Stage Type",
   "지도단계>필드.제출기간.라벨": "Submission Period",
   "지도단계>필드.심사단계이름.플레이스홀더": "e.g. Master’s Standard Track",
