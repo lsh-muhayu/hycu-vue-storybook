@@ -1,0 +1,1 @@
+import{c as o}from"./Primitive-DENH_Du6.js";import{r as e,c as i}from"./iframe-Cm9VbfmX.js";const[n]=o("ConfigProvider");function s(r){const t=n({dir:e("ltr")});return i(()=>r?.value||t.dir?.value||"ltr")}export{n as i,s as u};

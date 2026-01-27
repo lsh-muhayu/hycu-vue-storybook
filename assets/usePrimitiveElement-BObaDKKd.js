@@ -1,0 +1,1 @@
+import{r as n,c as m}from"./iframe-Cm9VbfmX.js";import{e as r}from"./Primitive-DENH_Du6.js";function o(){const e=n(),t=m(()=>["#text","#comment"].includes(e.value?.$el.nodeName)?e.value?.$el.nextElementSibling:r(e));return{primitiveElement:e,currentElement:t}}export{o as u};
