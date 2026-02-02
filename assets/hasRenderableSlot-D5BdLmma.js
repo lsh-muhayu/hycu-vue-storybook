@@ -1,0 +1,1 @@
+import{V as i,W as s,F as f,Y as n}from"./iframe-BRikH8ii.js";const e=r=>r==null||typeof r=="boolean"?!1:typeof r=="string"||typeof r=="number"?String(r).trim().length>0:Array.isArray(r)?r.some(e):!i(r)||r.type===s?!1:r.type===f?e(r.children):r.type===n?String(r.children??"").trim().length>0:!0,l=r=>{if(!r)return!1;const t=r();return!t||t.length===0?!1:t.some(e)};export{l as h};
