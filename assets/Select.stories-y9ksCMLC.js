@@ -1,0 +1,1332 @@
+import{d as T,c as L,a as w,b as k,e as z,o as F,k as h,f as A,g as s,n as H,r as q}from"./iframe-0cwev_ce.js";import{c as e,_ as n,a as t,b as l}from"./SelectItem-CCQHI_Pj.js";import{_ as o}from"./Label-LFpoVAxo.js";import"./preload-helper-PPVm8Dsz.js";import"./useForwardPropsEmits-BjDmfzMU.js";import"./index-CvXIkSuI.js";import"./Primitive-Dd_9CvMT.js";import"./useId-DCxF0d29.js";import"./useTypeahead-Dzcw3-Yq.js";import"./getActiveElement-FUKBWQwh.js";import"./Collection-BM2tFqtK.js";import"./usePrimitiveElement-dEGkcuEm.js";import"./PopperContent-CftYJ-04.js";import"./Presence-CG5f-olF.js";import"./Teleport-DXOKczYQ.js";import"./nullish-CHIgUVhi.js";import"./handleAndDispatchCustomEvent-ChOKVcqp.js";import"./ScrollArea-BkO2Sl4y.js";import"./useDirection-C_qcTcWP.js";import"./context-CF64Aa94.js";import"./ScrollAreaAutoSize-wKC1xwZw.js";import"./ohash.D__AXeF1-C-E83dC9.js";import"./useFormControl-BlHaeVaw.js";import"./VisuallyHidden-D-N6l6C_.js";import"./useFocusGuards-Cfo9ROWk.js";const V=k("rounded text-gray-500 outline-none select-none empty:hidden",{variants:{size:{sm:"px-2 py-1.5 text-xs",md:"px-3 py-2 text-sm"}},defaultVariants:{size:"md"}}),y=T({__name:"SelectFallbackItem",props:{status:{default:"idle"},length:{default:0},class:{default:""},size:{default:"md"}},setup(a){const r=a,C=L(()=>w(V({size:r.size}),r.class));return(b,c)=>(F(),z("div",{class:H(C.value)},[r.status==="pending"?h(b.$slots,"loading",{key:0},()=>[c[0]||(c[0]=s("div",{class:"flex items-center gap-2"},[s("div",{class:"h-3 w-3 animate-spin rounded-full border-2 border-gray-300 border-t-gray-600"}),s("span",null,"로딩 중...")],-1))]):r.status==="error"?h(b.$slots,"error",{key:1},()=>[c[1]||(c[1]=s("span",null,"데이터를 불러오는 중 에러가 발생했습니다.",-1))]):a.length===0?h(b.$slots,"empty",{key:2},()=>[c[2]||(c[2]=s("span",null,"선택할 수 있는 데이터가 없습니다.",-1))]):A("",!0)],2))}});y.__docgenInfo={exportName:"default",displayName:"SelectFallbackItem",type:1,props:[{name:"length",global:!1,description:"선택 아이템 개수",tags:[],required:!1,type:"number",declarations:[],schema:"number",default:"0"},{name:"class",global:!1,description:"",tags:[],required:!1,type:"string",declarations:[],schema:"string",default:'""'},{name:"size",global:!1,description:"",tags:[],required:!1,type:'"md" | "sm"',declarations:[],schema:{kind:"enum",type:'"md" | "sm"',schema:['"md"','"sm"']},default:'"md"'},{name:"status",global:!1,description:"데이터와 관련된 API 상태",tags:[],required:!1,type:'"error" | "idle" | "pending" | "success"',declarations:[],schema:{kind:"enum",type:'"error" | "idle" | "pending" | "success"',schema:['"error"','"idle"','"pending"','"success"']},default:'"idle"'},{name:"key",global:!1,description:"",tags:[],required:!1,type:"PropertyKey",declarations:[],schema:{kind:"enum",type:"PropertyKey",schema:["string","number","symbol"]}},{name:"ref",global:!1,description:"",tags:[],required:!1,type:"VNodeRef",declarations:[],schema:{kind:"enum",type:"VNodeRef",schema:["string","Ref<any, any>",{kind:"event",type:"(ref: Element | ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}, {}, {}, string, ComponentProvideOptions>, ... 4 more ..., any>, refs: Record<...>): void"}]}},{name:"ref_for",global:!1,description:"",tags:[],required:!1,type:"boolean",declarations:[],schema:{kind:"enum",type:"boolean",schema:["false","true"]}},{name:"ref_key",global:!1,description:"",tags:[],required:!1,type:"string",declarations:[],schema:"string"},{name:"style",global:!1,description:"",tags:[],required:!1,type:"unknown",declarations:[],schema:"unknown"}],events:[],slots:[{name:"loading",type:"{}",description:"",declarations:[],schema:{kind:"object",type:"{}"}},{name:"error",type:"{}",description:"",declarations:[],schema:{kind:"object",type:"{}"}},{name:"empty",type:"{}",description:"",declarations:[],schema:{kind:"object",type:"{}"}}],exposed:[{name:"length",type:"number",description:"선택 아이템 개수",declarations:[],schema:"number"},{name:"class",type:"string",description:"",declarations:[],schema:"string"},{name:"size",type:'"md" | "sm"',description:"",declarations:[],schema:{kind:"enum",type:'"md" | "sm"',schema:['"md"','"sm"']}},{name:"status",type:'"error" | "idle" | "pending" | "success"',description:"데이터와 관련된 API 상태",declarations:[],schema:{kind:"enum",type:'"error" | "idle" | "pending" | "success"',schema:['"error"','"idle"','"pending"','"success"']}}],sourceFiles:"/github-runner/_work/ck-tms-hycu/ck-tms-hycu/frontend/src/shared/ui/select/SelectFallbackItem.vue"};const ae={title:"Shared/UI/Select",component:e,parameters:{layout:"centered",controls:{include:["disabled","placeholder","invalid","readOnly","size"]},docs:{description:{component:`
+### 선택 드롭다운 컴포넌트
+
+Select 컴포넌트는 사용자가 여러 옵션 중 하나를 선택할 수 있는 드롭다운 메뉴를 제공합니다.
+Reka UI의 Select 프리미티브를 기반으로 구축되었으며, 접근성과 키보드 네비게이션을 완벽하게 지원합니다.
+
+## 주요 기능
+
+- **복합 컴포넌트 구조**: \`Select\`, \`SelectTrigger\`, \`SelectContent\`, \`SelectItem\`으로 구성
+- **접근성 지원**: ARIA 속성 및 키보드 네비게이션 완벽 지원
+- **스크롤 지원**: 많은 옵션이 있을 때 자동 스크롤 영역 제공
+- **상태 관리**: \`disabled\`, \`invalid\`, \`readOnly\` 상태 지원
+- **커스터마이징**: \`class\`를 통해 각 부분의 스타일 커스터마이징 가능
+- **제어 가능**: \`v-model:modelValue\`를 통한 제어 컴포넌트 지원
+- **비제어 가능**: \`defaultValue\`를 통한 비제어 컴포넌트 지원
+- **아이콘**: 우측에 자동으로 아래 방향 아이콘 표시
+- **플레이스홀더**: \`placeholder\` prop을 통해 선택 전 안내 텍스트 표시
+
+## 사용 예시
+
+\`\`\`vue
+<template>
+  <Select v-model:modelValue="selected">
+    <SelectTrigger placeholder="옵션을 선택하세요" />
+    <SelectContent>
+      <SelectItem value="option1">옵션 1</SelectItem>
+      <SelectItem value="option2">옵션 2</SelectItem>
+      <SelectItem value="option3">옵션 3</SelectItem>
+    </SelectContent>
+  </Select>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { Select, SelectTrigger, SelectContent, SelectItem } from '@/shared/ui/select';
+
+const selected = ref('');
+<\/script>
+\`\`\`
+        `}}},tags:["autodocs"],argTypes:{disabled:{control:"boolean",description:"Select 비활성화 여부",table:{type:{summary:"boolean"},defaultValue:{summary:"false"}}},placeholder:{control:"text",description:"선택 전에 표시할 플레이스홀더 텍스트 (SelectTrigger에 전달)",table:{type:{summary:"string"}}},invalid:{control:"boolean",description:"유효하지 않은 입력 여부 (빨간색 테두리 및 텍스트 표시, SelectTrigger에 전달)",table:{type:{summary:"boolean"},defaultValue:{summary:"false"}}},readOnly:{control:"boolean",description:"읽기 전용 여부 (회색 배경 표시, SelectTrigger에 전달)",table:{type:{summary:"boolean"},defaultValue:{summary:"false"}}},size:{control:"select",options:["md","sm"],description:"SelectTrigger의 크기",table:{type:{summary:"'md' | 'sm'"},defaultValue:{summary:"'md'"}}}}},i={render:a=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n},setup(){return{args:a}},template:`
+      <div class="w-80">
+        <Select :disabled="args.disabled">
+          <SelectTrigger
+            class="w-full text-left"
+            :placeholder="args.placeholder"
+            :invalid="args.invalid"
+            :read-only="args.readOnly"
+            :size="args.size"
+          />
+          <SelectContent>
+            <SelectItem value="option1">옵션 1</SelectItem>
+            <SelectItem value="option2">옵션 2</SelectItem>
+            <SelectItem value="option3">옵션 3</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+    `}),parameters:{controls:{disable:!1},docs:{description:{story:`
+이 스토리에서는 Select 컴포넌트의 UI 관련 속성을 인터랙티브하게 조정할 수 있습니다.
+오른쪽 컨트롤 패널을 사용하여 placeholder, disabled, invalid 등의 속성을 변경해보세요.
+
+## 사용 팁
+
+- **Placeholder**: 선택 전에 표시할 안내 텍스트를 설정합니다. Trigger에 표시되는 플레이스홀더 텍스트가 변경됩니다.
+- **Disabled**: \`true\`로 설정하면 Select가 비활성화되어 선택할 수 없습니다. Trigger가 회색으로 표시되고 클릭할 수 없게 됩니다.
+- **Invalid**: \`true\`로 설정하면 유효하지 않은 입력임을 나타내는 빨간색 테두리와 텍스트가 표시됩니다. Trigger의 테두리와 텍스트가 빨간색으로 변경됩니다.
+- **ReadOnly**: \`true\`로 설정하면 읽기 전용 상태임을 나타내는 회색 배경이 표시됩니다. Trigger의 배경이 회색으로 변경됩니다.
+- **Size**: Trigger의 크기를 조절합니다. \`md\`는 h-10 text-sm, \`sm\`은 h-8 text-xs입니다.
+        `}}},args:{disabled:!1,placeholder:"옵션을 선택하세요",invalid:!1,readOnly:!1,size:"md"}},d={render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n},template:`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">기본 Select</h3>
+          <Select>
+            <SelectTrigger
+              class="w-full text-left"
+              placeholder="옵션을 선택하세요"
+            />
+            <SelectContent>
+              <SelectItem value="option1">옵션 1</SelectItem>
+              <SelectItem value="option2">옵션 2</SelectItem>
+              <SelectItem value="option3">옵션 3</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+    `})},m={render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n,Label:o},template:`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">Label과 함께 사용</h3>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
+              <Label for="select-basic">기본 선택</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-basic"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-required" required>
+                필수 선택
+              </Label>
+              <Select>
+                <SelectTrigger
+                  id="select-required"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </div>
+      </div>
+    `})},S={render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n},template:`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">기본값이 있는 Select</h3>
+          <Select default-value="option2">
+            <SelectTrigger
+              class="w-full text-left"
+              placeholder="옵션을 선택하세요"
+            />
+            <SelectContent>
+              <SelectItem value="option1">옵션 1</SelectItem>
+              <SelectItem value="option2">옵션 2</SelectItem>
+              <SelectItem value="option3">옵션 3</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+    `})},p={render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n,Label:o},template:`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">다양한 크기</h3>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
+              <Label for="select-md">중간 크기 (md)</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-md"
+                  class="w-full text-left"
+                  placeholder="h-10 text-sm"
+                  size="md"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-sm">작은 크기 (sm)</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-sm"
+                  class="w-full text-left"
+                  placeholder="h-8 text-xs"
+                  size="sm"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </div>
+      </div>
+    `})},g={render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n,Label:o},template:`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">다양한 상태</h3>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
+              <Label for="select-normal">일반</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-normal"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-disabled">비활성화</Label>
+              <Select disabled>
+                <SelectTrigger
+                  id="select-disabled"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-invalid">유효하지 않은 입력</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-invalid"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                  invalid
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-readonly">읽기 전용</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-readonly"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                  read-only
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </div>
+      </div>
+    `})},x={render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n},template:`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">아이템 상태</h3>
+          <Select default-value="option2">
+            <SelectTrigger
+              class="w-full text-left"
+              placeholder="상태를 확인하세요"
+            />
+            <SelectContent>
+              <SelectItem value="option1">일반 아이템</SelectItem>
+              <SelectItem value="option2">선택된 아이템 (checked)</SelectItem>
+              <SelectItem value="option3" disabled>
+                비활성화된 아이템
+              </SelectItem>
+              <SelectItem value="option4">일반 아이템</SelectItem>
+            </SelectContent>
+          </Select>
+          <p class="text-xs text-gray-500">
+            • hover: 연한 파랑 배경과 파랑 텍스트
+            <br />• checked: 진한 파랑 배경과 흰색 텍스트
+            <br />• disabled: 투명도 60%로 표시
+          </p>
+        </div>
+      </div>
+    `})},f={parameters:{docs:{description:{story:`
+이 스토리는 많은 옵션이 있는 Select 컴포넌트를 보여줍니다.
+
+**maxHeight 설정**: Content의 \`maxHeight\` prop을 \`screen\`으로 설정하면, 드롭다운이 화면에서 보일 수 있는 만큼 최대한 늘어납니다. 화면 하단에 가까워지면 자동으로 높이가 조절되어 모든 옵션이 화면 안에 표시되도록 합니다.
+
+- number(기본: 300): 최대 ~px까지 표시
+- screen: 사용 가능한 공간에 맞춰 높이 자동 조절
+- 스크롤: 옵션이 많을 경우 자동으로 스크롤바 표시
+        `}}},render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n},template:`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">많은 옵션이 있는 Select</h3>
+          <Select>
+            <SelectTrigger
+              class="w-full text-left"
+              placeholder="국가를 선택하세요"
+            />
+            <SelectContent max-height="screen">
+              <SelectItem v-for="i in 100" :key="i" :value="'option' + i">
+                옵션 {{ i }}
+              </SelectItem>
+            </SelectContent>
+          </Select>
+          <p class="text-xs text-gray-500">
+            <strong>maxHeight="screen"</strong>으로 설정되어 화면에서 보일 수 있는 만큼
+            최대한 늘어납니다.
+          </p>
+        </div>
+      </div>
+    `})},u={parameters:{docs:{description:{story:`
+이 스토리는 AutoSize 기능을 통해 아이템 수에 따라 Content 크기가 가변적으로 달라지는 것을 보여줍니다.
+
+**AutoSize 동작 방식**:
+- ScrollAreaAutoSize를 사용하여 콘텐츠 크기에 따라 자동으로 높이가 조절됩니다.
+- 아이템이 적을 때: Content가 아이템에 맞춰 작게 표시됩니다.
+- 아이템이 많을 때: Content가 maxHeight까지 늘어나고, 그 이상은 스크롤바가 표시됩니다.
+
+**장점**:
+- 아이템이 적을 때 불필요한 공간을 차지하지 않습니다.
+- 아이템이 많을 때는 maxHeight까지 늘어나 최대한 많은 옵션을 한 번에 보여줍니다.
+- 사용자 경험이 향상됩니다.
+        `}}},render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n,Label:o},template:`
+      <div class="flex w-full flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">AutoSize 기능 비교</h3>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div class="flex flex-col gap-2">
+              <h4 class="text-xs font-medium text-gray-600">아이템이 적을 때 (3개)</h4>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent :max-height="300">
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                Content가 아이템에 맞춰 작게 표시됩니다. 스크롤바가 나타나지 않습니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h4 class="text-xs font-medium text-gray-600">아이템이 많을 때 (20개)</h4>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent :max-height="300">
+                  <SelectItem v-for="i in 20" :key="i" :value="'option' + i">
+                    옵션 {{ i }}
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                Content가 maxHeight(300px)까지 늘어나고, 스크롤바가 표시됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">실제 사용 예시</h3>
+          <div class="flex flex-col gap-2">
+            <Label for="autosize-select">동적 크기 조절 Select</Label>
+            <Select>
+              <SelectTrigger
+                id="autosize-select"
+                class="w-full text-left"
+                placeholder="옵션을 선택하세요"
+              />
+              <SelectContent :max-height="300">
+                <SelectItem value="item1">첫 번째 항목</SelectItem>
+                <SelectItem value="item2">두 번째 항목</SelectItem>
+                <SelectItem value="item3">세 번째 항목</SelectItem>
+                <SelectItem value="item4">네 번째 항목</SelectItem>
+                <SelectItem value="item5">다섯 번째 항목</SelectItem>
+              </SelectContent>
+            </Select>
+            <p class="text-xs text-gray-500">
+              위 예시는 5개의 아이템만 있어 Content가 작게 표시됩니다. 아이템을 더 추가하면
+              maxHeight까지 늘어납니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    `})},v={render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectItem:n},setup(){return{value:q("option1")}},template:`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">제어 컴포넌트</h3>
+          <div class="flex flex-col gap-2">
+            <Select v-model:model-value="value">
+              <SelectTrigger
+                class="w-full text-left"
+                placeholder="옵션을 선택하세요"
+              />
+              <SelectContent>
+                <SelectItem value="option1">옵션 1</SelectItem>
+                <SelectItem value="option2">옵션 2</SelectItem>
+                <SelectItem value="option3">옵션 3</SelectItem>
+              </SelectContent>
+            </Select>
+            <p class="text-sm text-gray-600">선택된 값: {{ value }}</p>
+          </div>
+        </div>
+      </div>
+    `})},I={parameters:{docs:{description:{story:`
+이 스토리는 SelectFallbackItem 컴포넌트를 사용하여 다양한 상태를 표시하는 방법을 보여줍니다.
+
+**SelectFallbackItem 상태**:
+- **pending**: 데이터를 로딩 중일 때 (스피너 + "로딩 중..." 메시지)
+- **error**: 데이터를 불러오는 중 에러가 발생했을 때 ("데이터를 불러오는 중 에러가 발생했습니다." 메시지)
+- **idle/success**: 데이터가 없을 때 ("선택할 수 있는 데이터가 없습니다." 메시지)
+
+**슬롯 커스터마이징**:
+- \`loading\` 슬롯: 로딩 상태 메시지 커스터마이징
+- \`error\` 슬롯: 에러 상태 메시지 커스터마이징
+- \`empty\` 슬롯: 빈 데이터 상태 메시지 커스터마이징
+
+**DataTable과의 일관성**:
+SelectFallbackItem은 DataTable과 동일한 패턴으로 상태를 처리하여 일관된 사용자 경험을 제공합니다.
+        `}}},render:()=>({components:{Select:e,SelectTrigger:l,SelectContent:t,SelectFallbackItem:y,Label:o},template:`
+      <div class="flex w-full flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">SelectFallbackItem 상태</h3>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class="flex flex-col gap-2">
+              <Label>로딩 중 (pending)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="데이터 로딩 중..."
+                />
+                <SelectContent>
+                  <SelectFallbackItem status="pending" />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                데이터를 불러오는 중일 때 스피너와 함께 "로딩 중..." 메시지가 표시됩니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>에러 (error)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="에러 발생"
+                />
+                <SelectContent>
+                  <SelectFallbackItem status="error" />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                데이터를 불러오는 중 에러가 발생했을 때 에러 메시지가 표시됩니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>빈 데이터 (idle/success)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="데이터 없음"
+                />
+                <SelectContent>
+                  <SelectFallbackItem />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                선택할 수 있는 데이터가 없을 때 기본 메시지가 표시됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">커스텀 메시지</h3>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class="flex flex-col gap-2">
+              <Label>커스텀 로딩 메시지</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="사용자 정의 로딩"
+                />
+                <SelectContent>
+                  <SelectFallbackItem status="pending">
+                    <template #loading>
+                      <div class="flex items-center gap-2">
+                        <div class="h-3 w-3 animate-spin rounded-full border-2 border-blue-300 border-t-blue-600" />
+                        <span>사용자 목록을 불러오는 중...</span>
+                      </div>
+                    </template>
+                  </SelectFallbackItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                loading 슬롯을 사용하여 커스텀 로딩 메시지를 표시할 수 있습니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>커스텀 에러 메시지</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="사용자 정의 에러"
+                />
+                <SelectContent>
+                  <SelectFallbackItem status="error">
+                    <template #error>
+                      <span>사용자 목록을 불러올 수 없습니다. 다시 시도해주세요.</span>
+                    </template>
+                  </SelectFallbackItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                error 슬롯을 사용하여 커스텀 에러 메시지를 표시할 수 있습니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>커스텀 빈 데이터 메시지</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="사용자 정의 빈 데이터"
+                />
+                <SelectContent>
+                  <SelectFallbackItem>
+                    <template #empty>
+                      <span>등록된 사용자가 없습니다.</span>
+                    </template>
+                  </SelectFallbackItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                empty 슬롯을 사용하여 커스텀 빈 데이터 메시지를 표시할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">크기 옵션</h3>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div class="flex flex-col gap-2">
+              <Label>중간 크기 (md)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="중간 크기"
+                  size="md"
+                />
+                <SelectContent>
+                  <SelectFallbackItem size="md" status="pending" />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                기본 크기 (px-3 py-2 text-sm)
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>작은 크기 (sm)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="작은 크기"
+                  size="sm"
+                />
+                <SelectContent>
+                  <SelectFallbackItem size="sm" status="pending" />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                작은 크기 (px-2 py-1.5 text-xs)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">실제 사용 예시</h3>
+          <div class="flex flex-col gap-2">
+            <Label for="practical-select">사용자 선택</Label>
+            <Select>
+              <SelectTrigger
+                id="practical-select"
+                class="w-full text-left"
+                placeholder="사용자를 선택하세요"
+              />
+              <SelectContent>
+                <SelectFallbackItem status="pending">
+                  <template #loading>
+                    <div class="flex items-center gap-2">
+                      <div class="h-3 w-3 animate-spin rounded-full border-2 border-gray-300 border-t-gray-600" />
+                      <span>사용자 목록을 불러오는 중...</span>
+                    </div>
+                  </template>
+                </SelectFallbackItem>
+              </SelectContent>
+            </Select>
+            <p class="text-xs text-gray-500">
+              API 호출 시 status를 pending으로 설정하고, 성공 시 SelectItem으로 교체하거나,
+              실패 시 status를 error로 변경하여 사용합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    `})};i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`{
+  render: args => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem
+    },
+    setup() {
+      return {
+        args
+      };
+    },
+    template: /*html*/\`
+      <div class="w-80">
+        <Select :disabled="args.disabled">
+          <SelectTrigger
+            class="w-full text-left"
+            :placeholder="args.placeholder"
+            :invalid="args.invalid"
+            :read-only="args.readOnly"
+            :size="args.size"
+          />
+          <SelectContent>
+            <SelectItem value="option1">옵션 1</SelectItem>
+            <SelectItem value="option2">옵션 2</SelectItem>
+            <SelectItem value="option3">옵션 3</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+    \`
+  }),
+  parameters: {
+    controls: {
+      disable: false
+    },
+    docs: {
+      description: {
+        story: \`
+이 스토리에서는 Select 컴포넌트의 UI 관련 속성을 인터랙티브하게 조정할 수 있습니다.
+오른쪽 컨트롤 패널을 사용하여 placeholder, disabled, invalid 등의 속성을 변경해보세요.
+
+## 사용 팁
+
+- **Placeholder**: 선택 전에 표시할 안내 텍스트를 설정합니다. Trigger에 표시되는 플레이스홀더 텍스트가 변경됩니다.
+- **Disabled**: \\\`true\\\`로 설정하면 Select가 비활성화되어 선택할 수 없습니다. Trigger가 회색으로 표시되고 클릭할 수 없게 됩니다.
+- **Invalid**: \\\`true\\\`로 설정하면 유효하지 않은 입력임을 나타내는 빨간색 테두리와 텍스트가 표시됩니다. Trigger의 테두리와 텍스트가 빨간색으로 변경됩니다.
+- **ReadOnly**: \\\`true\\\`로 설정하면 읽기 전용 상태임을 나타내는 회색 배경이 표시됩니다. Trigger의 배경이 회색으로 변경됩니다.
+- **Size**: Trigger의 크기를 조절합니다. \\\`md\\\`는 h-10 text-sm, \\\`sm\\\`은 h-8 text-xs입니다.
+        \`
+      }
+    }
+  },
+  args: {
+    disabled: false,
+    placeholder: '옵션을 선택하세요',
+    invalid: false,
+    readOnly: false,
+    size: 'md'
+  } as Record<string, unknown>
+}`,...i.parameters?.docs?.source}}};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem
+    },
+    template: /*html*/\`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">기본 Select</h3>
+          <Select>
+            <SelectTrigger
+              class="w-full text-left"
+              placeholder="옵션을 선택하세요"
+            />
+            <SelectContent>
+              <SelectItem value="option1">옵션 1</SelectItem>
+              <SelectItem value="option2">옵션 2</SelectItem>
+              <SelectItem value="option3">옵션 3</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+    \`
+  })
+}`,...d.parameters?.docs?.source}}};m.parameters={...m.parameters,docs:{...m.parameters?.docs,source:{originalSource:`{
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem,
+      Label
+    },
+    template: /*html*/\`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">Label과 함께 사용</h3>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
+              <Label for="select-basic">기본 선택</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-basic"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-required" required>
+                필수 선택
+              </Label>
+              <Select>
+                <SelectTrigger
+                  id="select-required"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </div>
+      </div>
+    \`
+  })
+}`,...m.parameters?.docs?.source}}};S.parameters={...S.parameters,docs:{...S.parameters?.docs,source:{originalSource:`{
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem
+    },
+    template: /*html*/\`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">기본값이 있는 Select</h3>
+          <Select default-value="option2">
+            <SelectTrigger
+              class="w-full text-left"
+              placeholder="옵션을 선택하세요"
+            />
+            <SelectContent>
+              <SelectItem value="option1">옵션 1</SelectItem>
+              <SelectItem value="option2">옵션 2</SelectItem>
+              <SelectItem value="option3">옵션 3</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+    \`
+  })
+}`,...S.parameters?.docs?.source}}};p.parameters={...p.parameters,docs:{...p.parameters?.docs,source:{originalSource:`{
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem,
+      Label
+    },
+    template: /*html*/\`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">다양한 크기</h3>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
+              <Label for="select-md">중간 크기 (md)</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-md"
+                  class="w-full text-left"
+                  placeholder="h-10 text-sm"
+                  size="md"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-sm">작은 크기 (sm)</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-sm"
+                  class="w-full text-left"
+                  placeholder="h-8 text-xs"
+                  size="sm"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </div>
+      </div>
+    \`
+  })
+}`,...p.parameters?.docs?.source}}};g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem,
+      Label
+    },
+    template: /*html*/\`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">다양한 상태</h3>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
+              <Label for="select-normal">일반</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-normal"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-disabled">비활성화</Label>
+              <Select disabled>
+                <SelectTrigger
+                  id="select-disabled"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-invalid">유효하지 않은 입력</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-invalid"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                  invalid
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <Label for="select-readonly">읽기 전용</Label>
+              <Select>
+                <SelectTrigger
+                  id="select-readonly"
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                  read-only
+                />
+                <SelectContent>
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </div>
+      </div>
+    \`
+  })
+}`,...g.parameters?.docs?.source}}};x.parameters={...x.parameters,docs:{...x.parameters?.docs,source:{originalSource:`{
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem
+    },
+    template: /*html*/\`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">아이템 상태</h3>
+          <Select default-value="option2">
+            <SelectTrigger
+              class="w-full text-left"
+              placeholder="상태를 확인하세요"
+            />
+            <SelectContent>
+              <SelectItem value="option1">일반 아이템</SelectItem>
+              <SelectItem value="option2">선택된 아이템 (checked)</SelectItem>
+              <SelectItem value="option3" disabled>
+                비활성화된 아이템
+              </SelectItem>
+              <SelectItem value="option4">일반 아이템</SelectItem>
+            </SelectContent>
+          </Select>
+          <p class="text-xs text-gray-500">
+            • hover: 연한 파랑 배경과 파랑 텍스트
+            <br />• checked: 진한 파랑 배경과 흰색 텍스트
+            <br />• disabled: 투명도 60%로 표시
+          </p>
+        </div>
+      </div>
+    \`
+  })
+}`,...x.parameters?.docs?.source}}};f.parameters={...f.parameters,docs:{...f.parameters?.docs,source:{originalSource:`{
+  parameters: {
+    docs: {
+      description: {
+        story: \`
+이 스토리는 많은 옵션이 있는 Select 컴포넌트를 보여줍니다.
+
+**maxHeight 설정**: Content의 \\\`maxHeight\\\` prop을 \\\`screen\\\`으로 설정하면, 드롭다운이 화면에서 보일 수 있는 만큼 최대한 늘어납니다. 화면 하단에 가까워지면 자동으로 높이가 조절되어 모든 옵션이 화면 안에 표시되도록 합니다.
+
+- number(기본: 300): 최대 ~px까지 표시
+- screen: 사용 가능한 공간에 맞춰 높이 자동 조절
+- 스크롤: 옵션이 많을 경우 자동으로 스크롤바 표시
+        \`
+      }
+    }
+  },
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem
+    },
+    template: /*html*/\`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">많은 옵션이 있는 Select</h3>
+          <Select>
+            <SelectTrigger
+              class="w-full text-left"
+              placeholder="국가를 선택하세요"
+            />
+            <SelectContent max-height="screen">
+              <SelectItem v-for="i in 100" :key="i" :value="'option' + i">
+                옵션 {{ i }}
+              </SelectItem>
+            </SelectContent>
+          </Select>
+          <p class="text-xs text-gray-500">
+            <strong>maxHeight="screen"</strong>으로 설정되어 화면에서 보일 수 있는 만큼
+            최대한 늘어납니다.
+          </p>
+        </div>
+      </div>
+    \`
+  })
+}`,...f.parameters?.docs?.source}}};u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{
+  parameters: {
+    docs: {
+      description: {
+        story: \`
+이 스토리는 AutoSize 기능을 통해 아이템 수에 따라 Content 크기가 가변적으로 달라지는 것을 보여줍니다.
+
+**AutoSize 동작 방식**:
+- ScrollAreaAutoSize를 사용하여 콘텐츠 크기에 따라 자동으로 높이가 조절됩니다.
+- 아이템이 적을 때: Content가 아이템에 맞춰 작게 표시됩니다.
+- 아이템이 많을 때: Content가 maxHeight까지 늘어나고, 그 이상은 스크롤바가 표시됩니다.
+
+**장점**:
+- 아이템이 적을 때 불필요한 공간을 차지하지 않습니다.
+- 아이템이 많을 때는 maxHeight까지 늘어나 최대한 많은 옵션을 한 번에 보여줍니다.
+- 사용자 경험이 향상됩니다.
+        \`
+      }
+    }
+  },
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem,
+      Label
+    },
+    template: /*html*/\`
+      <div class="flex w-full flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">AutoSize 기능 비교</h3>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div class="flex flex-col gap-2">
+              <h4 class="text-xs font-medium text-gray-600">아이템이 적을 때 (3개)</h4>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent :max-height="300">
+                  <SelectItem value="option1">옵션 1</SelectItem>
+                  <SelectItem value="option2">옵션 2</SelectItem>
+                  <SelectItem value="option3">옵션 3</SelectItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                Content가 아이템에 맞춰 작게 표시됩니다. 스크롤바가 나타나지 않습니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h4 class="text-xs font-medium text-gray-600">아이템이 많을 때 (20개)</h4>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="옵션을 선택하세요"
+                />
+                <SelectContent :max-height="300">
+                  <SelectItem v-for="i in 20" :key="i" :value="'option' + i">
+                    옵션 {{ i }}
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                Content가 maxHeight(300px)까지 늘어나고, 스크롤바가 표시됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">실제 사용 예시</h3>
+          <div class="flex flex-col gap-2">
+            <Label for="autosize-select">동적 크기 조절 Select</Label>
+            <Select>
+              <SelectTrigger
+                id="autosize-select"
+                class="w-full text-left"
+                placeholder="옵션을 선택하세요"
+              />
+              <SelectContent :max-height="300">
+                <SelectItem value="item1">첫 번째 항목</SelectItem>
+                <SelectItem value="item2">두 번째 항목</SelectItem>
+                <SelectItem value="item3">세 번째 항목</SelectItem>
+                <SelectItem value="item4">네 번째 항목</SelectItem>
+                <SelectItem value="item5">다섯 번째 항목</SelectItem>
+              </SelectContent>
+            </Select>
+            <p class="text-xs text-gray-500">
+              위 예시는 5개의 아이템만 있어 Content가 작게 표시됩니다. 아이템을 더 추가하면
+              maxHeight까지 늘어납니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    \`
+  })
+}`,...u.parameters?.docs?.source}}};v.parameters={...v.parameters,docs:{...v.parameters?.docs,source:{originalSource:`{
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectItem
+    },
+    setup() {
+      const value = ref<string>('option1');
+      return {
+        value
+      };
+    },
+    template: /*html*/\`
+      <div class="flex w-80 flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-semibold text-gray-700">제어 컴포넌트</h3>
+          <div class="flex flex-col gap-2">
+            <Select v-model:model-value="value">
+              <SelectTrigger
+                class="w-full text-left"
+                placeholder="옵션을 선택하세요"
+              />
+              <SelectContent>
+                <SelectItem value="option1">옵션 1</SelectItem>
+                <SelectItem value="option2">옵션 2</SelectItem>
+                <SelectItem value="option3">옵션 3</SelectItem>
+              </SelectContent>
+            </Select>
+            <p class="text-sm text-gray-600">선택된 값: {{ value }}</p>
+          </div>
+        </div>
+      </div>
+    \`
+  })
+}`,...v.parameters?.docs?.source}}};I.parameters={...I.parameters,docs:{...I.parameters?.docs,source:{originalSource:`{
+  parameters: {
+    docs: {
+      description: {
+        story: \`
+이 스토리는 SelectFallbackItem 컴포넌트를 사용하여 다양한 상태를 표시하는 방법을 보여줍니다.
+
+**SelectFallbackItem 상태**:
+- **pending**: 데이터를 로딩 중일 때 (스피너 + "로딩 중..." 메시지)
+- **error**: 데이터를 불러오는 중 에러가 발생했을 때 ("데이터를 불러오는 중 에러가 발생했습니다." 메시지)
+- **idle/success**: 데이터가 없을 때 ("선택할 수 있는 데이터가 없습니다." 메시지)
+
+**슬롯 커스터마이징**:
+- \\\`loading\\\` 슬롯: 로딩 상태 메시지 커스터마이징
+- \\\`error\\\` 슬롯: 에러 상태 메시지 커스터마이징
+- \\\`empty\\\` 슬롯: 빈 데이터 상태 메시지 커스터마이징
+
+**DataTable과의 일관성**:
+SelectFallbackItem은 DataTable과 동일한 패턴으로 상태를 처리하여 일관된 사용자 경험을 제공합니다.
+        \`
+      }
+    }
+  },
+  render: () => ({
+    components: {
+      Select,
+      SelectTrigger,
+      SelectContent,
+      SelectFallbackItem,
+      Label
+    },
+    template: /*html*/\`
+      <div class="flex w-full flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">SelectFallbackItem 상태</h3>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class="flex flex-col gap-2">
+              <Label>로딩 중 (pending)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="데이터 로딩 중..."
+                />
+                <SelectContent>
+                  <SelectFallbackItem status="pending" />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                데이터를 불러오는 중일 때 스피너와 함께 "로딩 중..." 메시지가 표시됩니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>에러 (error)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="에러 발생"
+                />
+                <SelectContent>
+                  <SelectFallbackItem status="error" />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                데이터를 불러오는 중 에러가 발생했을 때 에러 메시지가 표시됩니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>빈 데이터 (idle/success)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="데이터 없음"
+                />
+                <SelectContent>
+                  <SelectFallbackItem />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                선택할 수 있는 데이터가 없을 때 기본 메시지가 표시됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">커스텀 메시지</h3>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class="flex flex-col gap-2">
+              <Label>커스텀 로딩 메시지</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="사용자 정의 로딩"
+                />
+                <SelectContent>
+                  <SelectFallbackItem status="pending">
+                    <template #loading>
+                      <div class="flex items-center gap-2">
+                        <div class="h-3 w-3 animate-spin rounded-full border-2 border-blue-300 border-t-blue-600" />
+                        <span>사용자 목록을 불러오는 중...</span>
+                      </div>
+                    </template>
+                  </SelectFallbackItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                loading 슬롯을 사용하여 커스텀 로딩 메시지를 표시할 수 있습니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>커스텀 에러 메시지</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="사용자 정의 에러"
+                />
+                <SelectContent>
+                  <SelectFallbackItem status="error">
+                    <template #error>
+                      <span>사용자 목록을 불러올 수 없습니다. 다시 시도해주세요.</span>
+                    </template>
+                  </SelectFallbackItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                error 슬롯을 사용하여 커스텀 에러 메시지를 표시할 수 있습니다.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>커스텀 빈 데이터 메시지</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="사용자 정의 빈 데이터"
+                />
+                <SelectContent>
+                  <SelectFallbackItem>
+                    <template #empty>
+                      <span>등록된 사용자가 없습니다.</span>
+                    </template>
+                  </SelectFallbackItem>
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                empty 슬롯을 사용하여 커스텀 빈 데이터 메시지를 표시할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">크기 옵션</h3>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div class="flex flex-col gap-2">
+              <Label>중간 크기 (md)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="중간 크기"
+                  size="md"
+                />
+                <SelectContent>
+                  <SelectFallbackItem size="md" status="pending" />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                기본 크기 (px-3 py-2 text-sm)
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <Label>작은 크기 (sm)</Label>
+              <Select>
+                <SelectTrigger
+                  class="w-full text-left"
+                  placeholder="작은 크기"
+                  size="sm"
+                />
+                <SelectContent>
+                  <SelectFallbackItem size="sm" status="pending" />
+                </SelectContent>
+              </Select>
+              <p class="text-xs text-gray-500">
+                작은 크기 (px-2 py-1.5 text-xs)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h3 class="text-sm font-semibold text-gray-700">실제 사용 예시</h3>
+          <div class="flex flex-col gap-2">
+            <Label for="practical-select">사용자 선택</Label>
+            <Select>
+              <SelectTrigger
+                id="practical-select"
+                class="w-full text-left"
+                placeholder="사용자를 선택하세요"
+              />
+              <SelectContent>
+                <SelectFallbackItem status="pending">
+                  <template #loading>
+                    <div class="flex items-center gap-2">
+                      <div class="h-3 w-3 animate-spin rounded-full border-2 border-gray-300 border-t-gray-600" />
+                      <span>사용자 목록을 불러오는 중...</span>
+                    </div>
+                  </template>
+                </SelectFallbackItem>
+              </SelectContent>
+            </Select>
+            <p class="text-xs text-gray-500">
+              API 호출 시 status를 pending으로 설정하고, 성공 시 SelectItem으로 교체하거나,
+              실패 시 status를 error로 변경하여 사용합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    \`
+  })
+}`,...I.parameters?.docs?.source}}};const se=["Playground","Basic","WithLabel","WithDefaultValue","Sizes","States","ItemStates","MaxHeight","AutoSize","Controlled","EmptyStates"];export{u as AutoSize,d as Basic,v as Controlled,I as EmptyStates,x as ItemStates,f as MaxHeight,i as Playground,p as Sizes,g as States,S as WithDefaultValue,m as WithLabel,se as __namedExportsOrder,ae as default};
