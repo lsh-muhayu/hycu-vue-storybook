@@ -1,0 +1,1 @@
+import{c as o}from"./Primitive-Bp2ai5KS.js";import{r as e,c as i}from"./iframe-DDiegOnq.js";const[n]=o("ConfigProvider");function s(r){const t=n({dir:e("ltr")});return i(()=>r?.value||t.dir?.value||"ltr")}export{n as i,s as u};

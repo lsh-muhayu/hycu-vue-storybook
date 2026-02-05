@@ -76,6 +76,7 @@
   "API.postLabMeeting.S200": "The Workflow has been created.",
   "API.postPost.S200": "Resource post registered.",
   "API.postPost.E400": "Failed to register resource post",
+  "API.getPostDetail.E404": "Post not found.",
   "유효성.숫자최소": "Please enter a value greater than or equal to {number}.",
   "유효성.숫자최대": "Please enter a value less than or equal to {number}.",
   "유효성.숫자타입": "Please enter a valid number.",
@@ -446,5 +447,11 @@
   "자료실>필드.제목.플레이스홀더": "Please enter the title",
   "자료실>필드.첨부파일.라벨": "Attachments (Max {count})",
   "자료실>필드.첨부파일.선택없음": "No files selected",
-  "자료실>필드.학생선택.라벨": "Choose students"
+  "자료실>필드.학생선택.라벨": "Choose students",
+  "자료실>필드.공개범위.라벨": "The scope of disclosure",
+  "자료실>필드.공개범위.지도교수만": "This post is open only to advisors.",
+  "자료실>상세.첨부파일": "Attachments",
+  "자료실>상세.댓글": "Comments",
+  "자료실>상세.댓글.플레이스홀더": "Enter your comment",
+  "자료실>상세.댓글.등록": "Submit"
 }
